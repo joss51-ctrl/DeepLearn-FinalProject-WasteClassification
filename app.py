@@ -24,8 +24,8 @@ PLASTIC_CLASSES = ['HDPE', 'LDPA', 'Other', 'PET', 'PP', 'PS', 'PVC']
 @st.cache_resource
 def load_models():
     try:
-        general_model = tf.keras.models.load_model("models/efficientnet_b0_best.keras")
-        plastic_model = tf.keras.models.load_model("models/modelB0-plastic.keras")
+        general_model = tf.keras.models.load_model("models/efficientnet_b0_best.keras", compile=False)
+        plastic_model = tf.keras.models.load_model("models/modelB0-plastic.keras", compile=False)
         return general_model, plastic_model
     except Exception as e:
         st.error(f"Error loading models: {e}")
