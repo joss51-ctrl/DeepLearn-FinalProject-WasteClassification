@@ -29,7 +29,7 @@ def load_models():
             compile=False
         )
         plastic_model = tf.keras.models.load_model(
-            "models/modelb0_best.h5",
+            "models/modelB0_best.h5",
             compile=False
         )
         return general_model, plastic_model
