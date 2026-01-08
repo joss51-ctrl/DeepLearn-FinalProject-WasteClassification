@@ -25,7 +25,7 @@ PLASTIC_CLASSES = ['HDPE', 'LDPA', 'Other', 'PET', 'PP', 'PS', 'PVC']
 def load_models():
     try:
         general_model = tf.keras.models.load_model(
-            "models/efficientnet_b0_best.h5",
+            "models/efficientnet_b3_best.h5",
             compile=False
         )
         plastic_model = tf.keras.models.load_model(
